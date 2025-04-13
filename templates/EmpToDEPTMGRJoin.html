@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <table border="3px">
+            <h1>EmpToDEPTMGR Data</h1>
+            <tr>
+                <th>empno</th>
+                <th>ename</th>
+                <th>job</th>
+                <th>sal</th>
+                <th>comm</th>
+                <th>hiredate</th>
+                <th>dept_no</th>
+                <th>MGR</th>
+
+
+              
+                <th>dept_no</th>
+                <th>dname</th>
+                <th>dloc</th>
+
+                <th>MGR_empno</th>
+                <th>MGR_ename</th>
+                <th>MGR_sal</th>
+                <th>MGR_deptno</th>
+            </tr>
+            {% for edmo in QLEDMO %}
+            <tr>
+              
+               
+                <td>{{edmo.empno}}</td>
+                <td>{{edmo.ename}}</td>
+                <td>{{edmo.job}}</td>
+                <td>{{edmo.sal}}</td>
+                <td>{{edmo.comm}}</td>
+                <td>{{edmo.hiredate}}</td>
+                <td>{{edmo.dept_no}}</td>
+                <td>{{edmo.MGR}}</td>
+
+
+
+                <td>{{edmo.dept_no.dept_no}}</td>
+                <td>{{edmo.dept_no.dname}}</td>
+                <td>{{edmo.dept_no.dloc}}</td>
+
+
+                
+                <td>{{edmo.MGR.ename}}</td>
+                <td>{{edmo.MGR.empno}}</td>
+                <td>{{edmo.MGR.job}}</td>
+                <td>{{edmo.MGR.sal}}</td>
+
+
+            </tr>
+            {% endfor %}
+        </table>
+    </center>
+</body>
+</html>
